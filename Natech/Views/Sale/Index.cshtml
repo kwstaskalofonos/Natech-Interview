@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Natech.Models.SaleView
+
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+            <th scope="col">Seller</th>
+            <th scope="col"><button type="button" id="openSaleModal" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addSaleModal">Add</button></th>
+        </tr>
+    </thead>
+    <tbody id="table_body">
+    </tbody>
+</table>
+
+<partial name="_AddSaleModal" />
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(Json.Serialize(Model.sales));
+            $.each(model, function (index, value) {
+                console.log(value);
+                var tBody = '<tr id="' + value.saleId + '"><th scope="row">' + index + '</th><td>' + value.amount + '</td><td>'
+                    + value.saleDate + '</td><td>'+value.sellerName+" "+value.sellerSurName+'</td><td><button type="button" class="btn btn-warning editSale">Edit</button><button type="button" class="btn btn-danger deleteSale">Delete</button></td></tr>';
+                $('#table_body').append(tBody);
+            });
+
+            $("#openSaleModal").click(function (evt) {
+                evt.preventDefault();
+                $("#FirstNameAdd").val('');
+                $('#addSaleModal').modal('toggle');
+            });
+
+            $("#closeSellerModal").click(function (evt) {
+                evt.preventDefault();
+                $('#addSaleModal').modal('toggle');
+                $("#AmountAdd").val('');
+            });
+
+
+
+            $(".editSale").click(function (evt) {
+                evt.preventDefault();
+                var id=$(this).parent().parent().attr('id');
+                $.ajax({
+                    type: "GET",
+                    url:"/Sale/GetSale",
+                    contentType: "application/json",
+                    data: {SellerId: id},
+                    dataType: "json",
+                    success: function (msg) {
+                        console.log(msg);
+                        $('#editSaleModal').modal('toggle');
+                        $("#FirstNameEdit").val(msg.firstName);
+                        $("#SurNameEdit").val(msg.surName);
+                        $("#SellerIdEdit").val(msg.sellerId);
+                    },
+                    error: function (req, status, error) {
+                        console.log("Failure");
+                    }
+                });
+            });
+
+            $("#closeEditSellerModal").click(function (evt) {
+                evt.preventDefault();
+                $('#editSellerModal').modal('toggle');
+                $("#FirstNameEdit").val('');
+                $("#SurNameEdit").val('');
+            });
+
+
+
+            $(document).on("click", ".deleteSale",function() {
+                var sale = {
+                    SaleId: $(this).parent().parent().attr('id')
+                };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Delete","Sale")',
+                    contentType: "application/json",
+                    data: JSON.stringify(sale),
+                    success: function (msg) {
+                        console.log("Success");
+                        $('#table_body').empty();
+                        $.each(msg.sales, function (index, value) {
+                            var tBody = '<tr id="' + value.saleId + '"><th scope="row">' + index + '</th><td>' + value.amount + '</td><td>'
+                                + value.saleDate + '</td><td>' + value.sellerName + " " + value.sellerSurName + '</td><td><button type="button" class="btn btn-warning editSale">Edit</button><button type="button" class="btn btn-danger deleteSale">Delete</button></td></tr>';
+                            $('#table_body').append(tBody);
+                        });
+                    },
+                    error: function (req, status, error) {
+                        console.log("FaiUrlure");
+
+                    }
+                });
+            });
+
+
+        });
+    </script>
+}

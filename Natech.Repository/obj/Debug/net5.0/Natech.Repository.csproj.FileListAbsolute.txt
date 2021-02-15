@@ -1,0 +1,15 @@
+D:\MyApps\Natech\Natech.Repository\bin\Debug\net5.0\Natech.Repository.deps.json
+D:\MyApps\Natech\Natech.Repository\bin\Debug\net5.0\Natech.Repository.dll
+D:\MyApps\Natech\Natech.Repository\bin\Debug\net5.0\ref\Natech.Repository.dll
+D:\MyApps\Natech\Natech.Repository\bin\Debug\net5.0\Natech.Repository.pdb
+D:\MyApps\Natech\Natech.Repository\bin\Debug\net5.0\Natech.Data.dll
+D:\MyApps\Natech\Natech.Repository\bin\Debug\net5.0\Natech.Data.pdb
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.csprojAssemblyReference.cache
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.AssemblyInfoInputs.cache
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.AssemblyInfo.cs
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.csproj.CoreCompileInputs.cache
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.csproj.CopyComplete
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.dll
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\ref\Natech.Repository.dll
+D:\MyApps\Natech\Natech.Repository\obj\Debug\net5.0\Natech.Repository.pdb

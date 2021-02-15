@@ -1,0 +1,11 @@
+D:\MyApps\Natech\Natech.Data\bin\Debug\net5.0\Natech.Data.deps.json
+D:\MyApps\Natech\Natech.Data\bin\Debug\net5.0\Natech.Data.dll
+D:\MyApps\Natech\Natech.Data\bin\Debug\net5.0\ref\Natech.Data.dll
+D:\MyApps\Natech\Natech.Data\bin\Debug\net5.0\Natech.Data.pdb
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\Natech.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\Natech.Data.AssemblyInfoInputs.cache
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\Natech.Data.AssemblyInfo.cs
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\Natech.Data.csproj.CoreCompileInputs.cache
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\Natech.Data.dll
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\ref\Natech.Data.dll
+D:\MyApps\Natech\Natech.Data\obj\Debug\net5.0\Natech.Data.pdb
